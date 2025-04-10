@@ -6,21 +6,54 @@
   <title>NextTech</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #0d0d0d;
       color: #f5f5f5;
       line-height: 1.6;
+      display: flex;
+    }
+    .sidebar {
+      width: 240px;
+      background-color: #111;
+      padding: 2rem 1rem;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .sidebar img {
+      width: 80px;
+      margin: 0 auto 1rem;
+    }
+    .sidebar a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .sidebar a:hover {
+      background: #ffffff10;
+      color: white;
+    }
+    .content {
+      margin-left: 240px;
+      padding: 2rem;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
     }
     header {
       text-align: center;
-      padding: 4rem 1rem 2rem;
-    }
-    header img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 1rem;
+      padding: 2rem 1rem;
+      animation: fadeIn 1.2s ease-in-out;
     }
     header h1 {
       font-size: 3rem;
@@ -38,11 +71,16 @@
       border-radius: 8px;
       text-decoration: none;
       display: inline-block;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #ffffff20;
     }
     section {
-      padding: 3rem 1rem;
+      padding: 2rem 0;
       max-width: 800px;
       margin: auto;
+      animation: fadeInUp 1s ease-in-out;
     }
     iframe {
       width: 100%;
@@ -55,42 +93,64 @@
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #888;
+      animation: fadeIn 1.5s ease-in-out;
     }
     .socials a {
       color: #f5f5f5;
       margin: 0 10px;
       text-decoration: none;
+      transition: color 0.3s;
+    }
+    .socials a:hover {
+      color: #1da1f2;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <header>
+  <div class="sidebar">
     <img src="Capture.png" alt="NextTech Logo">
-    <h1>NextTech</h1>
-    <p>Where Tech Meets Simplicity & Creativity</p>
-    <a href="https://youtube.com/@NextTech_Ksh" class="button" target="_blank">Watch on YouTube</a>
-  </header>
+    <a href="#about">About</a>
+    <a href="#trailer">Trailer</a>
+    <a href="#follow">Socials</a>
+    <a href="https://youtube.com/@NextTech_Ksh" target="_blank">YouTube</a>
+  </div>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Hi, I'm Ksh — the founder of NextTech. I love breaking down complex tech and making it fun, smart, and simple. Follow our journey as we explore the future of technology together.</p>
-  </section>
+  <div class="content">
+    <header>
+      <h1>NextTech</h1>
+      <p>Where Tech Meets Simplicity & Creativity</p>
+      <a href="https://youtube.com/@NextTech_Ksh" class="button" target="_blank">Watch on YouTube</a>
+    </header>
 
-  <section>
-    <h2>Channel Trailer</h2>
-    <iframe src="https://www.youtube.com/embed/" title="NextTech Trailer" allowfullscreen></iframe>
-  </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, I'm Ksh — the founder of NextTech. I love breaking down complex tech and making it fun, smart, and simple. Follow our journey as we explore the future of technology together.</p>
+    </section>
 
-  <section>
-    <h2>Follow Us</h2>
-    <div class="socials">
-      <a href="https://youtube.com/@NextTech_Ksh" target="_blank">YouTube</a>
-      <a href="https://instagram.com/nexttech_ksh" target="_blank">Instagram</a>
-    </div>
-  </section>
+    <section id="trailer">
+      <h2>Channel Trailer</h2>
+      <iframe src="https://www.youtube.com/embed/" title="NextTech Trailer" allowfullscreen></iframe>
+    </section>
 
-  <footer>
-    &copy; 2025 NextTech™. Built with ❤️ by Ksh.
-  </footer>
+    <section id="follow">
+      <h2>Follow Us</h2>
+      <div class="socials">
+        <a href="https://youtube.com/@NextTech_Ksh" target="_blank">YouTube</a>
+        <a href="https://instagram.com/nexttech_ksh" target="_blank">Instagram</a>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 NextTech™. Built with ❤️ by Ksh.
+    </footer>
+  </div>
 </body>
 </html>
