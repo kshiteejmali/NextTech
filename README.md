@@ -9,7 +9,7 @@ Welcome to the official repository for the **NextTech Website** — the online h
 
 ## 🌐 Live Demo
 
-🔗 [Visit the Website](https://yourusername.github.io/NextTech)  
+🔗 [Visit the Website](https://kshiteejmali.github.io/NextTech)  
 📺 [Watch Us on YouTube](https://youtube.com/@NextTech_Ksh)
 
 ---
