@@ -42,7 +42,7 @@ Welcome to the official repository for the **NextTech Website** — the online h
 3. **Push to GitHub**
 
 > ⚡ GitHub Pages automatically hosts your site at:
-> `https://yourusername.github.io/NextTech`
+> `https://kshiteejmali.github.io/NextTech`
 
 ---
 
